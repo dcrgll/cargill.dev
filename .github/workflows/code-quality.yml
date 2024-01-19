@@ -1,0 +1,16 @@
+name: Code Quality
+on: [pull_request]
+jobs:
+  Prettier_ESLint:
+    if: github.actor != 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+      - name: Install modules
+        run: bun install
+      - name: Run Prettier
+        run: bun format
