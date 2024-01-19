@@ -1,9 +1,14 @@
 import { Button } from '@/components/ui/button'
+import { Header } from '@/components/header'
+import { ScrollArea } from '@/components/scroll'
 
-export default function Home() {
+const Home = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <ScrollArea className="flex flex-col">
       <Button>Click Me</Button>
-    </main>
+      <Header title="Dan Cargill" />
+    </ScrollArea>
   )
 }
+
+export default Home
