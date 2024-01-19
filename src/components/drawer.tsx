@@ -7,14 +7,15 @@ import { Button } from '@/components/ui/button'
 
 import { Menu } from './menu'
 
-export const MobileDrawer = () => {
+export const MobileDrawer = ({
+  open,
+  onClose
+}: {
+  open: boolean
+  onClose: () => void
+}) => {
   return (
-    <Drawer.Root shouldScaleBackground>
-      <Button variant="ghost" size="icon" title="Toggle drawer" asChild>
-        <Drawer.Trigger className="w-4 !justify-start">
-          <MenuIcon size={16} />
-        </Drawer.Trigger>
-      </Button>
+    <Drawer.Root open={open} onClose={onClose}>
       <Drawer.Portal>
         <Drawer.Overlay className="fixed inset-0" />
         <Drawer.Content className="fixed bottom-0 left-0 right-0 mt-24 flex h-[80%] flex-col rounded-t-lg bg-gray-100">
