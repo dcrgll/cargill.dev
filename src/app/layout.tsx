@@ -4,6 +4,7 @@ import { GeistSans } from 'geist/font/sans'
 
 import './globals.css'
 
+import { Menu } from '@/components/menu'
 import { Sidebar } from '@/components/sidebar'
 
 export const metadata: Metadata = {
@@ -22,7 +23,9 @@ const RootLayout = ({
         <main vaul-drawer-wrapper="" className="min-h-screen bg-white">
           <div className="lg:flex">
             <div className="flex flex-1">{children}</div>
-            <Sidebar>hello</Sidebar>
+            <Sidebar>
+              <Menu />
+            </Sidebar>
           </div>
         </main>
         <Analytics />
