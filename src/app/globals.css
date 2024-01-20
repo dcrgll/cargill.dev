@@ -47,8 +47,64 @@
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
   }
+
+  ::selection {
+    @apply bg-black text-white;
+  }
+
+  html,
+  body {
+    @apply bg-white;
+  }
+
+  html {
+    @apply overflow-hidden scroll-smooth antialiased;
+    text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+
+  .scrollable-area {
+    @apply h-full max-h-dynamic-screen min-h-dynamic-screen overflow-y-auto overflow-x-hidden;
+  }
+
+  p {
+    @apply mb-6;
+  }
+
+  a,
+  button {
+    @apply cursor-pointer outline-none;
+  }
+
+  a {
+    @apply transition-colors duration-300;
+  }
+
+  body {
+    @apply font-sans text-base text-gray-900;
+  }
+
+  #__next {
+    @apply min-h-dynamic-screen;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply scroll-mt-16 font-semibold slashed-zero tracking-tighter text-black lg:scroll-mt-8;
+  }
 }
 
- .scrollable-area {
-   @apply h-full max-h-dynamic-screen min-h-dynamic-screen overflow-y-auto overflow-x-hidden;
- }
+@layer components {
+  .link-card {
+    @apply -mx-1.5 -my-1 rounded bg-transparent px-1.5 py-1 transition-colors duration-300 hover:bg-gray-200;
+  }
+
+  .content-wrapper {
+    @apply z-[1] w-full px-6 pb-8 pt-8 lg:px-8 lg:pb-16 lg:pt-24;
+  }
+
+  .content {
+    @apply mx-auto w-full lg:mb-0 lg:max-w-3xl;
+  }
+}
