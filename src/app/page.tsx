@@ -8,17 +8,16 @@ const Home = () => {
     <ScrollArea className="flex flex-col">
       <div className="content-wrapper">
         <div className="content">
-          <PageTitle title="Home" className="lg:hidden" />
+          <PageTitle title="Home" className="hidden" />
+          <p> {`Hey, I'm Dan.`}</p>
           <p>
-            {`Hey, I'm Dan. I'm a `}
-            <a
+            {`I'm a `}
+            <ExternalLink
               href="https://leerob.io/blog/product-engineers"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline"
+              className="hover:text-gray-600"
             >
               Product Engineer
-            </a>{' '}
+            </ExternalLink>{' '}
             currently playing the internet at{' '}
             <ExternalLink
               href="https://www.studentbeans.com/uk"
@@ -26,8 +25,9 @@ const Home = () => {
             >
               StudentBeans
             </ExternalLink>
-            .
           </p>
+
+          <p></p>
 
           <p>
             {/* I develop things as a Senior Javascript Software Engineer at
@@ -38,7 +38,7 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <Header title="Dan Cargill" />
+      <Header />
     </ScrollArea>
   )
 }
