@@ -11,7 +11,7 @@
   @media screen and (max-width: 768px) {
     main {
       padding: 20rem 1.2rem;
-      max-height:100vh;
+      max-height:100dvh;
     }
   }
 
